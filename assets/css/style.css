@@ -26,13 +26,5 @@ footer { grid-area: footer; }
             'nav footer'
         ;
     }
-
-    header {
-        grid-column: span 2;
-    }
-
-    nav {
-        grid-row: span 2;
-    }
 }
 
