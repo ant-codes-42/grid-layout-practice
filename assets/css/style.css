@@ -1,0 +1,38 @@
+body {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        'banner'
+        'nav'
+        'main'
+        'footer'
+    ;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+header { grid-area: banner; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+@media (min-width: 40em) {
+    body {
+        grid-template-columns: 12em 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            'banner banner'
+            'nav main'
+            'nav footer'
+        ;
+    }
+
+    header {
+        grid-column: span 2;
+    }
+
+    nav {
+        grid-row: span 2;
+    }
+}
+
